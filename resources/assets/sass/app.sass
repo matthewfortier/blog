@@ -1,0 +1,42 @@
+// Fonts 
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+
+// Variables
+@import "variables"
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
+
+// Normalize
+@import "node_modules/normalize.css/normalize"
+
+body
+    background-color: #fff
+    font-family: 'Work Sans', sans-serif
+    overflow-y: auto
+    overflow-x: hidden
+
+nav
+    position: fixed
+    width: 13%
+    height: 100vh
+    background-color: $nav
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+    padding: 20px
+    color: $red
+
+    .logo
+        font-size: 38px
+
+        .subtext
+            font-size: 14px
+            color: #eee
+
+.container
+    position: absolute
+    margin-left: 13%
+    padding: 20px
+    width: 85%
+
+.bold
+    font-weight: bold

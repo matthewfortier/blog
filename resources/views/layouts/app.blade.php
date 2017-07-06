@@ -7,11 +7,15 @@
 
     <title>Matthew Fortier Blog - @yield('title')</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
   </head>
   <body>
-
+    <nav>
+        <div class="logo">
+          <span class="bold">\n</span><span>ewline</span>
+          <p class="subtext">by Matthew Fortier</p>                  
+        </div>
+    </nav>
     <div class="container">
         @yield('content')
     </div>

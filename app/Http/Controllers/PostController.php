@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Post;
 
 class PostController extends Controller
@@ -48,7 +49,7 @@ class PostController extends Controller
 
         $post->save();
 
-        Session::flash('success', 'This post was successfully created.');        
+        $request->session()->flash('success', 'This post was successfully created.');        
 
         return redirect()->route('posts.show', $post->id);
     }
@@ -98,7 +99,7 @@ class PostController extends Controller
 
         $post->save();
 
-        Session::flash('success', 'This post was successfully updated.');
+        $request->session()->flash('success', 'This post was successfully updated.');
 
         return redirect()->route('posts.show', $post->id);
     }
