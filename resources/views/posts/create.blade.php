@@ -8,7 +8,7 @@
 
     {!! Form::open(['route' => 'posts.store']) !!}
         {{ Form::label('title', 'Title:') }}
-        {{ Form::text('title', null, array('class' => 'form-control')) }}
+        {{ Form::text('title', null, array('class' => 'form-control', 'required' => '')) }}
         <br>
         {{ Form::label('body', 'Body:') }}
         {{ Form::textarea('body', null, array('class' => 'form-control')) }}
