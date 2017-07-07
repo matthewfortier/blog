@@ -1,42 +1,141 @@
 // Fonts 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Biryani:900|Open+Sans|Roboto+Mono|Work+Sans:800');
 
 // Variables
 @import "variables"
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap"
 
 // Normalize
-@import "node_modules/normalize.css/normalize"
+//@import "node_modules/normalize.css/normalize"
+
+*
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+    color: inherit
 
 body
     background-color: #fff
     font-family: 'Work Sans', sans-serif
     overflow-y: auto
     overflow-x: hidden
+    margin: 0
+    padding: 0
 
 nav
-    position: fixed
-    width: 13%
+    width: 250px
     height: 100vh
+    position: fixed
     background-color: $nav
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
-    padding: 20px
-    color: $red
-
+    
     .logo
-        font-size: 38px
+        height: 250px
+        width: 250px
+        color: white
 
-        .subtext
-            font-size: 14px
-            color: #eee
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .cursor
+            color: $red
+
+        .logo-text
+            font-size: 15vh
+            color: #272727
+            position: absolute
+            z-index: -1
+
+        .logo-name
+            color: white
+            position: absolute
+            display: flex
+            flex-direction: column
+            text-decoration: none
+
+            #name-text
+                font-size: 4vh
+                margin-bottom: -5px
+
+            #name-first
+                font-family: 'Open Sans', sans-serif
+                font-size: 1.5vh
+
+            #name-last
+                font-family: 'Open Sans', sans-serif                
+                font-size: 1.5vh
+
+            &:hover
+                color: $red
+                transition: color .1s ease-in
+                cursor: pointer
+
+
+    .navigation
+        text-align: center
+        color: white
+        width: 50%
+        margin: 0 auto
+
+        a
+            margin-bottom: 50px
+
+        .link
+            cursor: pointer
+            position: relative
+            height: 50px
+
+            li
+                list-style-type: none
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 50px
+
+
+            span:nth-child(1)
+                position: absolute
+                height: 5px
+                width: 0%
+                top: 0
+                left: 0
+                background-color: $red
+                transition: width .2s ease-in-out
+
+            span:nth-child(3)
+                position: absolute
+                height: 5px
+                width: 0%
+                bottom: 0
+                right: 0
+                background-color: $red
+                transition: width .2s ease-in-out                
+
+            &:hover
+                span:nth-child(1)
+                    position: absolute
+                    height: 5px
+                    width: 100%
+                    top: 0
+                    left: 0
+                    background-color: $red
+                    transition: width .2s ease-in-out
+                    
+                span:nth-child(3)
+                    position: absolute
+                    height: 5px
+                    width: 100%
+                    bottom: 0
+                    right: 0
+                    background-color: $red
+                    transition: width .2s ease-in-out
+                    
 
 .container
-    position: absolute
-    margin-left: 13%
-    padding: 20px
-    width: 85%
+    width: calc(100% - 250px)
+    margin-left: 250px
 
-.bold
-    font-weight: bold
+@import "index"

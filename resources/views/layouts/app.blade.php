@@ -11,18 +11,52 @@
   </head>
   <body>
     <nav>
-        <div class="logo">
-          <span class="bold">\n</span><span>ewline</span>
-          <p class="subtext">by Matthew Fortier</p>                  
-        </div>
+       <div class="logo">
+	   		<div class="logo-text">
+			   <span>\n</span>
+			</div>
+			<a href="/" class="logo-name">
+				<span id="name-text">newline<span class="cursor">_</span></span>
+				<span id="name-first">by Matthew Fortier</span>
+			</a>
+       </div>
+	   <div class="navigation">
+	   		<a href="/posts">
+			   <div class="link">
+					<span></span>
+					<li>Blog</li>
+					<span></span>   
+				</div>
+			</a>
+			<a href="/">
+			   <div class="link">
+					<span></span>
+					<li>Projects</li>
+					<span></span>   
+				</div>
+			</a>
+			<a href="/contact">
+			   <div class="link">
+					<span></span>
+					<li>Contact</li>
+					<span></span>   
+				</div>
+			</a>
+			<a href="/about">
+			   <div class="link">
+					<span></span>
+					<li>About Me</li>
+					<span></span>   
+				</div>
+			</a>
+	   </div>
     </nav>
     <div class="container">
         @yield('content')
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/all.js') }}"></script>
+	@yield('scripts')
   </body>
 </html>

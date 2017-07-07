@@ -20,9 +20,18 @@ elixir(function(mix) {
     });
 
     elixir(function(mix) {
+        mix.copy(
+            'node_modules/typed.js/lib/typed.min.js',
+            'resources/assets/js'
+        );
+
         mix.sass([
             'app.sass'
-        ], 'public/css');
+        ], 'public/css')
+        .scripts([
+            'typed.min.js',
+            'public/js'
+        ]);
     });
 
 });
