@@ -4166,7 +4166,7 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jquery@^3.1.1:
+jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -4828,6 +4828,10 @@ md5@^2.2.1:
     charenc "~0.0.1"
     crypt "~0.0.1"
     is-buffer "~1.1.1"
+
+mdi@^1.9.33:
+  version "1.9.33"
+  resolved "https://registry.yarnpkg.com/mdi/-/mdi-1.9.33.tgz#3caf6d95fc6b800633630bd62ba0cf1fbde6b2e2"
 
 media-typer@0.3.0:
   version "0.3.0"

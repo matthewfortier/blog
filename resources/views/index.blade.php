@@ -13,7 +13,7 @@
 @section('scripts')
    <script>
         var typed = new Typed('.typing', {
-            strings: ["Matthew Fortier.", "Web Developer.", "..full stack.", "Aspiring Designer", "Opinions", "Code", "Tech", "Thoughts", "\\newline"],
+            strings: ["Matthew Fortier.", "Web Developer.", "...full stack.", "Aspiring Designer", "Code", "Tech", "Oppinions", "Thoughts", "\\newline"],
             typeSpeed: 30,
             cursorChar: '_'
         });

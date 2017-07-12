@@ -21,8 +21,18 @@ elixir(function(mix) {
 
     elixir(function(mix) {
         mix.copy(
-            'node_modules/typed.js/lib/typed.min.js',
+            [
+                'node_modules/typed.js/lib/typed.min.js',
+                'node_modules/jquery/dist/jquery.min.js',                
+            ],
             'resources/assets/js'
+        );
+
+        mix.copy(
+            [
+                'node_modules/mdi/css/materialdesignicons.min.css'               
+            ],
+            'resources/assets/sass'
         );
 
         mix.sass([
@@ -30,6 +40,8 @@ elixir(function(mix) {
         ], 'public/css')
         .scripts([
             'typed.min.js',
+            'jquery.min.js',
+            'app.js',
             'public/js'
         ]);
     });

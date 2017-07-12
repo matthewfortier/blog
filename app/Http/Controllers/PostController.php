@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Post;
+use GrahamCampbell\Markdown\Facades\Markdown;
 
 class PostController extends Controller
 {
@@ -46,7 +47,7 @@ class PostController extends Controller
 
         $post->title = $request->title;
         $post->slug = str_slug($request->title, '-');
-        $post->body = $request->body;
+        $post->body = Markdown::convertToHtml($request->body);
 
         $post->save();
 
@@ -98,7 +99,7 @@ class PostController extends Controller
 
         $post->title = $request->title;
         $post->slug = str_slug($request->title, '-');
-        $post->body = $request->body;
+        $post->body = Markdown::convertToHtml($request->body);
 
         $post->save();
 

@@ -16,12 +16,12 @@
 			   <span>\n</span>
 			</div>
 			<a href="/" class="logo-name">
-				<span id="name-text">newline<span class="cursor">_</span></span>
+				<span id="name-text">\newline<span class="cursor">_</span></span>
 				<span id="name-first">by Matthew Fortier</span>
 			</a>
        </div>
 	   <div class="navigation">
-	   		<a href="/posts">
+	   		<a id="blog-link" href="/blog">
 			   <div class="link">
 					<span></span>
 					<li>Blog</li>
@@ -50,13 +50,30 @@
 				</div>
 			</a>
 	   </div>
+	   <div class="links">
+	   		<i class="mdi mdi-linkedin"></i>
+			<i class="mdi mdi-bell"></i>
+			<i class="mdi mdi-bell"></i>
+	   </div>
     </nav>
+	
+	@include('partials.blog-sidebar')
+
     <div class="container">
         @yield('content')
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="{{ asset('js/all.js') }}"></script>
+	<script>
+		$('#blog-link').mouseover(function(){
+			$('.blog-sidebar').removeClass("leave").addClass("out");
+		});
+
+		$('.link').mouseover(function(){
+			$('.blog-sidebar').removeClass("out").addClass("leave");
+		});
+	</script>
 	@yield('scripts')
   </body>
 </html>

@@ -3,9 +3,17 @@
 @section('title', $post["title"])
 
 @section('content')
-    
-    <h2>{{ $post["title"] }}</h2>
-    <p>{{ $post["body"] }}</p>
-    <br>
+
+    <div class="page-content">
+        <div class="left"></div>
+        <div class="post-single-body">
+            <h1 id="post-single-title">{{ $post["title"] }}</h1>
+            <img src="{{ asset('img/hero.png') }}" alt="">
+            <div class="markdown">
+                {!! html_entity_decode($post["body"]); !!}
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
 
 @endsection
