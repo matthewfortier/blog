@@ -12,6 +12,7 @@
             <div class="markdown">
                 {!! html_entity_decode($post["body"]); !!}
             </div>
+            @include('../partials/_disqus')
         </div>
         <div class="right"></div>
     </div>
