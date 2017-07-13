@@ -5,9 +5,11 @@
 /vendor
 /.idea
 /.vagrant
+/conf
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
 .env
 .DS_STORE
+web.config
