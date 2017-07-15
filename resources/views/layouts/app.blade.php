@@ -13,52 +13,39 @@
   <body>
     <nav>
        <div class="logo">
-	   		<div class="logo-text">
-			   <span>\n</span>
+	   		<div class="spinner">
+				<span></span>   
 			</div>
-			<a href="/" class="logo-name">
-				<span id="name-text">\newline<span class="cursor">_</span></span>
-				<span id="name-first">by Matthew Fortier</span>
-			</a>
-       </div>
-	   <div class="navigation">
-	   		<a id="blog-link" href="/blog">
-			   <div class="link">
-					<span></span>
-					<li>Blog</li>
-					<span></span>   
-				</div>
-			</a>
-			<a href="/">
-			   <div class="link">
-					<span></span>
-					<li>Projects</li>
-					<span></span>   
-				</div>
-			</a>
-			<a href="/contact">
-			   <div class="link">
-					<span></span>
-					<li>Contact</li>
-					<span></span>   
-				</div>
-			</a>
-			<a href="/about">
-			   <div class="link">
-					<span></span>
-					<li>About Me</li>
-					<span></span>   
-				</div>
-			</a>
+			<div class="text">
+				<span style="color: white; margin-right: -15px;">MATTHEW</span>
+				<span style="color: rgba(255,255,255,.7);">FORTIER</span>
+			</div>
 	   </div>
 	   <div class="links">
-	   		<i class="mdi mdi-linkedin"></i>
-			<i class="mdi mdi-bell"></i>
-			<i class="mdi mdi-bell"></i>
+	   		<ul>
+				<li class="link">
+					<span></span>
+					<span>Blog</span>
+				</li>
+				<li class="link">
+					<span></span>
+					<span>Portfolio</span>
+				</li>
+				<li class="link">
+					<span></span>
+					<span>Resume</span>
+				</li>
+				<li class="link">
+					<span></span>
+					<span>About Me</span>
+				</li>
+				<li class="link">
+					<span></span>
+					<span>Contact</span>
+				</li>
+			</ul>
 	   </div>
     </nav>
-	
-	@include('partials.blog-sidebar')
 
     <div class="container">
         @yield('content')
@@ -66,15 +53,6 @@
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="{{ asset('js/all.js') }}"></script>
-	<script>
-		$('#blog-link').mouseover(function(){
-			$('.blog-sidebar').removeClass("leave").addClass("out");
-		});
-
-		$('.link').mouseover(function(){
-			$('.blog-sidebar').removeClass("out").addClass("leave");
-		});
-	</script>
 	@yield('scripts')
   </body>
 </html>
