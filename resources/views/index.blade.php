@@ -3,10 +3,6 @@
 @section('title', 'Home')
 
 @section('content')
-    
-    <div class="index-container">
-        <div class="typing"></div>        
-    </div>
 
 @endsection
 

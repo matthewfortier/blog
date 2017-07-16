@@ -53,19 +53,20 @@
 </nav>
 <div class="mobile-links">
     <ul>
-        <li>Blog</li>
-        <li>Portfolio</li>
-        <li>Resume</li>
-        <li>About Me</li>
-        <li>Contact</li>
+        <a href="/blog">
+            <li>Blog</li>
+        </a>
+        <a href="/">
+            <li>Portfolio</li>
+        </a>
+        <a href="/">
+            <li>Resume</li>
+        </a>
+        <a href="/about">
+            <li>About Me</li>
+        </a>
+        <a href="/contact">
+            <li>Contact</li>
+        </a>
     </ul>
 </div>
-
-@section('scripts')
-    <script>
-        $(".menu-icon").click(function(){
-            $(this).toggleClass("active");
-            $('.mobile-links').toggleClass("active");
-        });
-    </script>
-@endsection

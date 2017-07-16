@@ -20,6 +20,12 @@
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="{{ asset('js/all.js') }}"></script>
+	<script>
+        $(".menu-icon").click(function(){
+            $(this).toggleClass("active");
+            $('.mobile-links').toggleClass("active");
+        });
+    </script>
 	@yield('scripts')
   </body>
 </html>

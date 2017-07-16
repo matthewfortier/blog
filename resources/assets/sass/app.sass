@@ -18,6 +18,8 @@ body
     background-color: #f7f9fa;        
 
 nav
+    position: relative
+    z-index: 10
     background-color: #191e28
     display: flex
     justify-content: center    
@@ -165,6 +167,7 @@ nav
         background-color: white
         margin: 3px 0
         transition: all .2s ease-in-out
+        border-radius: 10px
 
     &.active    
         & > span
@@ -172,6 +175,7 @@ nav
             transition: all .2s ease-in-out
 
         .menu-icon-middle
+
             span:nth-child(1)
                 transform: rotate(45deg)
                 transition: all .2s ease-in-out
@@ -185,7 +189,7 @@ nav
     position: absolute
     top: -250px
     left: 0
-    z-index: -1
+    z-index: 5
     height: 250px
     background-color: #f7f9fa
     width: 100%
@@ -206,14 +210,15 @@ nav
         width: 100%
         border-top: 2px solid darken(#f7f9fa, 5)
         text-align: center
+        cursor: pointer
 
     &.active
-        top: 50px
+        top: 44px
         transition: all .3s ease-in
 
 .container
     position: relative
-    z-index: -10
+    z-index: 0
 
 @media only screen and (max-width : 768px)
     .menu-icon
@@ -231,9 +236,10 @@ nav
     nav
         //justify-content: space-between
         //padding: 0 20px
+        margin: 0
 
         .logo
-            font-size: 30px
+            font-size: 1.4em
 
         .links
             font-size: 14px
