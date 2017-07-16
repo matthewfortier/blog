@@ -28,7 +28,7 @@ nav
         position: relative
         font-size: 45px
         margin-right: 20px
-        padding: 20px 0 10px 0
+        padding: 10px 0 10px 0
         transition: all .1s ease-in-out
 
         .spinner
@@ -66,7 +66,7 @@ nav
 
     .links
         margin-left: 20px
-        padding: 20px 0 10px 0
+        padding: 10px 0 10px 0
 
         ul
             margin: 0
@@ -99,7 +99,7 @@ nav
 
     &:hover 
         .logo
-            padding: 40px 0 30px 0
+            padding: 40px 0 40px 0
             transition: all .1s ease-in-out
 
 .loader
@@ -138,9 +138,112 @@ nav
     border-bottom: 10px solid transparent
     animation: spinForwards 1s linear infinite
 
+
+.menu-icon
+    display: none
+    justify-content: center
+    align-items: flex-end
+    flex-direction: column
+    position: relative
+    width: 75px
+
+    .menu-icon-middle
+        position: relative
+        width: 35px
+        height: 5px
+        margin-bottom: 6px
+
+        span
+            position: absolute
+            transition: all .2s ease-in-out
+            
+
+    span
+        display: block
+        width: 35px
+        height: 5px
+        background-color: white
+        margin: 3px 0
+        transition: all .2s ease-in-out
+
+    &.active    
+        & > span
+            opacity: 0
+            transition: all .2s ease-in-out
+
+        .menu-icon-middle
+            span:nth-child(1)
+                transform: rotate(45deg)
+                transition: all .2s ease-in-out
+
+            span:nth-child(2)
+                transform: rotate(-45deg)
+                transition: all .2s ease-in-out    
+
+
+.mobile-links
+    position: absolute
+    top: -250px
+    left: 0
+    z-index: -1
+    height: 250px
+    background-color: #f7f9fa
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all .3s ease-out
+    
+
+    ul
+        list-style-type: none
+        margin: 0
+        padding: 0
+        width: 100%
+
+    li
+        padding: 13px 0
+        width: 100%
+        border-top: 2px solid darken(#f7f9fa, 5)
+        text-align: center
+
+    &.active
+        top: 50px
+        transition: all .3s ease-in
+
 .container
+    position: relative
+    z-index: -10
 
+@media only screen and (max-width : 768px)
+    .menu-icon
+        display: flex
 
+    nav
+        .logo
+            text-align: center
+            font-size: 30px
+
+    .links 
+        display: none
+
+@media only screen and (max-width : 992px)
+    nav
+        //justify-content: space-between
+        //padding: 0 20px
+
+        .logo
+            font-size: 30px
+
+        .links
+            font-size: 14px
+    
+        &:hover .logo
+            padding: 10px 0 10px 0
+
+        .mobile-links
+            display: block
+                
 @keyframes spinForwards
   0%
     transform: rotate(0deg)
